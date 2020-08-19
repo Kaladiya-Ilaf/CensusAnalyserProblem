@@ -27,6 +27,8 @@ public class CensusAnalyser {
             return numberOfEntries;
         } catch (IOException e) {
             throw new CensusAnalyserException(e.getMessage(),CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM);
+        } catch (RuntimeException e){
+            throw new CensusAnalyserException(e.getMessage(),CensusAnalyserException.ExceptionType.INCORRECT_DATA_PROBLEM);
         }
 
 
