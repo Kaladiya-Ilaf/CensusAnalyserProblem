@@ -123,4 +123,16 @@ public class CensusAnalyserTest {
             Assert.assertEquals(CensusAnalyserException.ExceptionType.INCORRECT_DATA_PROBLEM,e.type);
         }
     }
+
+    @Test
+    public void givenIndiaStateCodeFile_whenIncorrectHeader_shouldThrowCustomException() {
+        ExpectedException expectedException = ExpectedException.none();
+        expectedException.expect(CensusAnalyserException.class);
+
+        try {
+            CensusAnalyser.loadIndiaCensusData(INDIA_STATE_CODE_INCORRECT_DATA_CSV_FILE_PATH);
+        } catch (CensusAnalyserException e) {
+            Assert.assertEquals(CensusAnalyserException.ExceptionType.INCORRECT_DATA_PROBLEM,e.type);
+        }
+    }
 }
