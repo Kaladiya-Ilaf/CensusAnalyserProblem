@@ -11,8 +11,7 @@ import java.util.stream.StreamSupport;
 
 public class CensusAnalyser {
     public static int loadIndiaCensusData(String csvFilePath) throws CensusAnalyserException {
-        try {
-            Reader reader = Files.newBufferedReader(Paths.get(csvFilePath));
+        try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath))) {
             CsvToBeanBuilder<IndiaCensusCSV> csvToBeanBuilder = new CsvToBeanBuilder(reader);
             csvToBeanBuilder.withType(IndiaCensusCSV.class);
             csvToBeanBuilder.withIgnoreLeadingWhiteSpace(true);
@@ -29,7 +28,6 @@ public class CensusAnalyser {
         } catch (RuntimeException e){
             throw new CensusAnalyserException(e.getMessage(), CensusAnalyserException.ExceptionType.INCORRECT_DATA_PROBLEM);
         }
-
 
     }
 }
