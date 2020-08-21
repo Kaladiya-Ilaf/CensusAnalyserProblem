@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1.882s</div>
+<div class="counter">1.348s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,52 +79,52 @@
 </thead>
 <tr>
 <td class="success">givenIndiaStateCodeCSVFile_whenProper_shouldReturnsCorrectRecordCount</td>
-<td class="success">0.201s</td>
+<td class="success">0.085s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">givenIndiaStateCodeCSVFile_whenWrongPath_shouldThrowCustomException</td>
-<td class="success">0.168s</td>
+<td class="success">0.043s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">givenIndiaStateCodeFile_whenIncorrectDelimiter_shouldThrowCustomException</td>
-<td class="success">0.029s</td>
+<td class="success">0.053s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">givenIndiaStateCodeFile_whenIncorrectHeader_shouldThrowCustomException</td>
-<td class="success">0.014s</td>
+<td class="success">0.055s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">givenIndiaStateCodeFile_whenWrongFileExtension_shouldThrowCustomException</td>
-<td class="success">0.001s</td>
+<td class="success">0.011s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">givenIndianCensusCSVFile_whenIncorrectDelimiter_shouldThrowCustomException</td>
-<td class="success">0.062s</td>
+<td class="success">0.113s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">givenIndianCensusCSVFile_whenIncorrectHeader_shouldThrowCustomException</td>
-<td class="success">0.054s</td>
+<td class="success">0.027s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">givenIndianCensusCSVFile_whenProper_shouldReturnsCorrectRecordCount</td>
-<td class="success">1.351s</td>
+<td class="success">0.950s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">givenIndianCensusCSVFile_whenWrongFileExtension_shouldThrowCustomException</td>
-<td class="success">0.001s</td>
+<td class="success">0.011s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">givenIndianCensusCSVFile_whenWrongPath_shouldThrowCustomException</td>
-<td class="success">0.001s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -132,7 +132,7 @@
 <div id="tab1" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>Exception in thread &quot;pool-2-thread-1&quot; java.lang.RuntimeException: com.opencsv.exceptions.CsvRequiredFieldEmptyException: Number of data fields does not match number of headers.
+<pre>Exception in thread &quot;pool-2-thread-4&quot; java.lang.RuntimeException: com.opencsv.exceptions.CsvRequiredFieldEmptyException: Number of data fields does not match number of headers.
 	at com.opencsv.bean.util.OpencsvUtils.handleException(OpencsvUtils.java:122)
 	at com.opencsv.bean.concurrent.ProcessCsvLine.run(ProcessCsvLine.java:108)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
@@ -156,7 +156,7 @@ Caused by: com.opencsv.exceptions.CsvRequiredFieldEmptyException: Number of data
 	at com.opencsv.bean.concurrent.ProcessCsvLine.processLine(ProcessCsvLine.java:135)
 	at com.opencsv.bean.concurrent.ProcessCsvLine.run(ProcessCsvLine.java:87)
 	... 3 more
-Exception in thread &quot;pool-2-thread-3&quot; java.lang.RuntimeException: com.opencsv.exceptions.CsvRequiredFieldEmptyException: Number of data fields does not match number of headers.
+Exception in thread &quot;pool-2-thread-1&quot; java.lang.RuntimeException: com.opencsv.exceptions.CsvRequiredFieldEmptyException: Number of data fields does not match number of headers.
 	at com.opencsv.bean.util.OpencsvUtils.handleException(OpencsvUtils.java:122)
 	at com.opencsv.bean.concurrent.ProcessCsvLine.run(ProcessCsvLine.java:108)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
@@ -168,7 +168,7 @@ Caused by: com.opencsv.exceptions.CsvRequiredFieldEmptyException: Number of data
 	at com.opencsv.bean.concurrent.ProcessCsvLine.processLine(ProcessCsvLine.java:135)
 	at com.opencsv.bean.concurrent.ProcessCsvLine.run(ProcessCsvLine.java:87)
 	... 3 more
-Exception in thread &quot;pool-2-thread-4&quot; java.lang.RuntimeException: com.opencsv.exceptions.CsvRequiredFieldEmptyException: Number of data fields does not match number of headers.
+Exception in thread &quot;pool-2-thread-3&quot; java.lang.RuntimeException: com.opencsv.exceptions.CsvRequiredFieldEmptyException: Number of data fields does not match number of headers.
 	at com.opencsv.bean.util.OpencsvUtils.handleException(OpencsvUtils.java:122)
 	at com.opencsv.bean.concurrent.ProcessCsvLine.run(ProcessCsvLine.java:108)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
@@ -191,7 +191,7 @@ Caused by: com.opencsv.exceptions.CsvRequiredFieldEmptyException: Number of data
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.3</a> at 21-Aug-2020, 7:59:13 AM</p>
+<a href="http://www.gradle.org">Gradle 6.3</a> at 21-Aug-2020, 8:13:53 PM</p>
 </div>
 </div>
 </body>
