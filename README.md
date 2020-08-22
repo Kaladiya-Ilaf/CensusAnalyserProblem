@@ -1,2 +1,6 @@
 # CensusAnalyserProblem
-Problem for practising OpenCSV,JSON,Generics and Sort and Search. 
+Problem for practising:
+  OpenCSV
+  JSON
+  Generics
+  Sort and Search. 
