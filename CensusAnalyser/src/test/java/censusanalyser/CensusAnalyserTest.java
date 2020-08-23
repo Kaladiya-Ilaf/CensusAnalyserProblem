@@ -140,7 +140,7 @@ public class CensusAnalyserTest {
     }
 
     @Test
-    public void givenIndianCensusCSVFile_whenSortedSortedOnState_shouldReturnSortedResult() {
+    public void givenIndianCensusCSVFile_whenSortedOnState_shouldReturnSortedResult() {
         try {
             CensusAnalyser censusAnalyser = new CensusAnalyser();
             censusAnalyser.loadIndiaCensusData(INDIA_CENSUS_CSV_FILE_PATH);
@@ -153,7 +153,7 @@ public class CensusAnalyserTest {
     }
 
     @Test
-    public void givenIndiaStateCodeFile_whenSortedSortedOnStateCode_shouldReturnSortedResult() {
+    public void givenIndiaStateCodeFile_whenSortedOnStateCode_shouldReturnSortedResult() {
         try {
             CensusAnalyser censusAnalyser = new CensusAnalyser();
             censusAnalyser.loadIndiaStateCodeData(INDIA_STATE_CODE_CSV_FILE_PATH);
