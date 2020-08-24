@@ -52,9 +52,9 @@ public class CensusAnalyser {
             Iterator<E> censusCSVIterator = csvBuilder.getCSVFileIterator(reader, censusCSVClass);
             Iterable<E> censusCSVIterable = () -> censusCSVIterator;
             if(censusCSVClass.getName().equals("censusanalyser.IndiaCensusCSV")){
-            StreamSupport.stream(censusCSVIterable.spliterator(), false)
-                    .map(IndiaCensusCSV.class::cast)
-                    .forEach(censusCSV -> censusMap.put(censusCSV.state, new CensusDAO(censusCSV)));
+                StreamSupport.stream(censusCSVIterable.spliterator(), false)
+                        .map(IndiaCensusCSV.class::cast)
+                        .forEach(censusCSV -> censusMap.put(censusCSV.state, new CensusDAO(censusCSV)));
             }else if (censusCSVClass.getName().equals("censusanalyser.USCensusCSV")){
                 StreamSupport.stream(censusCSVIterable.spliterator(), false)
                         .map(USCensusCSV.class::cast)
