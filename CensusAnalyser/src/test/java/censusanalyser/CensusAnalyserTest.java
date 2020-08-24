@@ -222,11 +222,37 @@ public class CensusAnalyserTest {
             CensusAnalyser censusAnalyser = new CensusAnalyser();
             censusAnalyser.loadUSCensusData(US_CENSUS_CSV_FILE_PATH);
             String stateWiseSortedCensusData = censusAnalyser.getPopulationWiseSortedCensusData();
-            IndiaCensusCSV[] censusCSV = new Gson().fromJson(stateWiseSortedCensusData, IndiaCensusCSV[].class);
+            USCensusCSV[] censusCSV = new Gson().fromJson(stateWiseSortedCensusData, USCensusCSV[].class);
             Assert.assertEquals("California", censusCSV[0].state);
         } catch (CensusAnalyserException e) {
             e.printStackTrace();
         }
 
+    }
+
+    @Test
+    public void givenUSCensusCSVFile_whenSortedOnPopulationDensity_shouldReturnSortedResult() {
+        try {
+            CensusAnalyser censusAnalyser = new CensusAnalyser();
+            censusAnalyser.loadUSCensusData(US_CENSUS_CSV_FILE_PATH);
+            String stateWiseSortedCensusData = censusAnalyser.getPopulationDensityWiseSortedCensusData();
+            USCensusCSV[] censusCSV = new Gson().fromJson(stateWiseSortedCensusData, USCensusCSV[].class);
+            Assert.assertEquals("District of Columbia", censusCSV[0].state);
+        } catch (CensusAnalyserException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void givenUSCensusCSVFile_whenSortedOnArea_shouldReturnSortedResult() {
+        try {
+            CensusAnalyser censusAnalyser = new CensusAnalyser();
+            censusAnalyser.loadUSCensusData(US_CENSUS_CSV_FILE_PATH);
+            String stateWiseSortedCensusData = censusAnalyser.getAreaWiseSortedCensusData();
+            USCensusCSV[] censusCSV = new Gson().fromJson(stateWiseSortedCensusData, USCensusCSV[].class);
+            Assert.assertEquals("Alaska", censusCSV[0].state);
+        } catch (CensusAnalyserException e) {
+            e.printStackTrace();
+        }
     }
 }
