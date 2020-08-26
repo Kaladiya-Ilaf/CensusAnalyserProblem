@@ -1,35 +1,23 @@
 package censusanalyser;
 
 import com.google.gson.Gson;
-import csvbuilder.CSVBuilderException;
-import csvbuilder.CSVBuilderFactory;
-import csvbuilder.ICSVBuilder;
-import java.io.IOException;
-import java.io.Reader;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 public class CensusAnalyser {
-
+    public enum Country{ INDIA, US };
     Map<String, CensusDAO> censusMap = null;
 
     public CensusAnalyser() {
         censusMap = new HashMap<String, CensusDAO>();
     }
 
-    public int loadIndiaCensusData(String... csvFilePath) throws CensusAnalyserException {
-      censusMap = new CensusLoader().loadCensusData(IndiaCensusCSV.class,csvFilePath);
+    public int loadCensusData(Country country, String... csvFilePath) throws CensusAnalyserException {
+      censusMap = new CensusLoader().loadCensusData(country, csvFilePath);
       return censusMap.size();
     }
-
-    public int loadUSCensusData(String... csvFilePath) throws CensusAnalyserException {
-        censusMap = new CensusLoader().loadCensusData(USCensusCSV.class, csvFilePath);
-        return censusMap.size();
-    }
-
+    
     private static <E> int getCount(Iterator<E> iterator) {
         Iterable<E> csvIterable = () -> iterator;
         return (int) StreamSupport.stream(csvIterable.spliterator(), false).count();
