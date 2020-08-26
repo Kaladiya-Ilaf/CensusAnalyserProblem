@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">20</div>
+<div class="counter">1</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.983s</div>
+<div class="counter">0.221s</div>
 <p>duration</p>
 </div>
 </td>
@@ -51,7 +51,7 @@
 </td>
 <td>
 <div class="infoBox failures" id="successRate">
-<div class="percent">95%</div>
+<div class="percent">0%</div>
 <p>successful</p>
 </div>
 </td>
@@ -70,13 +70,15 @@
 <div id="tab0" class="tab">
 <h2>Failed tests</h2>
 <div class="test">
-<a name="givenIndiaAndUSCensusCSVFile_whenSortedOnPopulationAndDensity_shouldReturnSortedResult"></a>
-<h3 class="failures">givenIndiaAndUSCensusCSVFile_whenSortedOnPopulationAndDensity_shouldReturnSortedResult</h3>
+<a name="givenIndianCensusCSVFile_whenProper_shouldReturnsCorrectRecordCount"></a>
+<h3 class="failures">givenIndianCensusCSVFile_whenProper_shouldReturnsCorrectRecordCount</h3>
 <span class="code">
-<pre>org.junit.ComparisonFailure: expected:&lt;[abc]&gt; but was:&lt;[[{&quot;state&quot;:&quot;Uttar Pradesh&quot;,&quot;population&quot;:199812341,&quot;populationDensity&quot;:828.0,&quot;totalArea&quot;:240928.0},{&quot;state&quot;:&quot;Maharashtra&quot;,&quot;population&quot;:112372972,&quot;populationDensity&quot;:365.0,&quot;totalArea&quot;:307713.0},{&quot;state&quot;:&quot;Bihar&quot;,&quot;population&quot;:103804637,&quot;populationDensity&quot;:1102.0,&quot;totalArea&quot;:94163.0},{&quot;state&quot;:&quot;West Bengal&quot;,&quot;population&quot;:91347736,&quot;populationDensity&quot;:1029.0,&quot;totalArea&quot;:88752.0},{&quot;state&quot;:&quot;Madhya Pradesh&quot;,&quot;population&quot;:72597565,&quot;populationDensity&quot;:236.0,&quot;totalArea&quot;:308245.0},{&quot;state&quot;:&quot;Tamil Nadu&quot;,&quot;population&quot;:72138958,&quot;populationDensity&quot;:555.0,&quot;totalArea&quot;:130058.0},{&quot;state&quot;:&quot;Rajasthan&quot;,&quot;population&quot;:68621012,&quot;populationDensity&quot;:201.0,&quot;totalArea&quot;:342239.0},{&quot;state&quot;:&quot;Karnataka&quot;,&quot;population&quot;:61130704,&quot;populationDensity&quot;:319.0,&quot;totalArea&quot;:191791.0},{&quot;state&quot;:&quot;Gujarat&quot;,&quot;population&quot;:60383628,&quot;populationDensity&quot;:308.0,&quot;totalArea&quot;:196024.0},{&quot;state&quot;:&quot;Andhra Pradesh&quot;,&quot;population&quot;:49386799,&quot;populationDensity&quot;:303.0,&quot;totalArea&quot;:162968.0},{&quot;state&quot;:&quot;Odisha&quot;,&quot;population&quot;:41947358,&quot;populationDensity&quot;:269.0,&quot;totalArea&quot;:155707.0},{&quot;state&quot;:&quot;Telangana&quot;,&quot;population&quot;:35286757,&quot;populationDensity&quot;:307.0,&quot;totalArea&quot;:114840.0},{&quot;state&quot;:&quot;Kerala&quot;,&quot;population&quot;:33387677,&quot;populationDensity&quot;:859.0,&quot;totalArea&quot;:38863.0},{&quot;state&quot;:&quot;Jharkhand&quot;,&quot;population&quot;:32966238,&quot;populationDensity&quot;:414.0,&quot;totalArea&quot;:79714.0},{&quot;state&quot;:&quot;Assam&quot;,&quot;population&quot;:31169272,&quot;populationDensity&quot;:397.0,&quot;totalArea&quot;:78438.0},{&quot;state&quot;:&quot;Punjab&quot;,&quot;population&quot;:27704236,&quot;populationDensity&quot;:550.0,&quot;totalArea&quot;:50362.0},{&quot;state&quot;:&quot;Chattisgarh&quot;,&quot;population&quot;:25540196,&quot;populationDensity&quot;:189.0,&quot;totalArea&quot;:135191.0},{&quot;state&quot;:&quot;Haryana&quot;,&quot;population&quot;:25353081,&quot;populationDensity&quot;:573.0,&quot;totalArea&quot;:44212.0},{&quot;state&quot;:&quot;Jammu and Kashmir&quot;,&quot;population&quot;:12548926,&quot;populationDensity&quot;:57.0,&quot;totalArea&quot;:222236.0},{&quot;state&quot;:&quot;Uttarakhand&quot;,&quot;population&quot;:10116752,&quot;populationDensity&quot;:189.0,&quot;totalArea&quot;:53483.0},{&quot;state&quot;:&quot;Himachal Pradesh&quot;,&quot;population&quot;:6864602,&quot;populationDensity&quot;:123.0,&quot;totalArea&quot;:55673.0},{&quot;state&quot;:&quot;Tripura&quot;,&quot;population&quot;:3671032,&quot;populationDensity&quot;:350.0,&quot;totalArea&quot;:10486.0},{&quot;state&quot;:&quot;Meghalaya&quot;,&quot;population&quot;:2964007,&quot;populationDensity&quot;:132.0,&quot;totalArea&quot;:22429.0},{&quot;state&quot;:&quot;Manipur&quot;,&quot;population&quot;:2721756,&quot;populationDensity&quot;:122.0,&quot;totalArea&quot;:22327.0},{&quot;state&quot;:&quot;Nagaland&quot;,&quot;population&quot;:1980602,&quot;populationDensity&quot;:119.0,&quot;totalArea&quot;:16579.0},{&quot;state&quot;:&quot;Goa&quot;,&quot;population&quot;:1457723,&quot;populationDensity&quot;:394.0,&quot;totalArea&quot;:3702.0},{&quot;state&quot;:&quot;Arunachal Pradesh&quot;,&quot;population&quot;:1382611,&quot;populationDensity&quot;:50.0,&quot;totalArea&quot;:21000.0},{&quot;state&quot;:&quot;Mizoram&quot;,&quot;population&quot;:1091014,&quot;populationDensity&quot;:52.0,&quot;totalArea&quot;:21081.0},{&quot;state&quot;:&quot;Sikkim&quot;,&quot;population&quot;:607688,&quot;populationDensity&quot;:86.0,&quot;totalArea&quot;:7096.0}]]&gt;
-	at org.junit.Assert.assertEquals(Assert.java:115)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at censusanalyser.CensusAnalyserTest.givenIndiaAndUSCensusCSVFile_whenSortedOnPopulationAndDensity_shouldReturnSortedResult(CensusAnalyserTest.java:265)
+<pre>java.lang.AssertionError: expected:&lt;28&gt; but was:&lt;29&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:645)
+	at org.junit.Assert.assertEquals(Assert.java:631)
+	at censusanalyser.CensusAnalyserTest.givenIndianCensusCSVFile_whenProper_shouldReturnsCorrectRecordCount(CensusAnalyserTest.java:21)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -139,104 +141,9 @@
 </tr>
 </thead>
 <tr>
-<td class="failures">givenIndiaAndUSCensusCSVFile_whenSortedOnPopulationAndDensity_shouldReturnSortedResult</td>
-<td class="failures">0.027s</td>
+<td class="failures">givenIndianCensusCSVFile_whenProper_shouldReturnsCorrectRecordCount</td>
+<td class="failures">0.221s</td>
 <td class="failures">failed</td>
-</tr>
-<tr>
-<td class="success">givenIndiaStateCodeCSVFile_whenProper_shouldReturnsCorrectRecordCount</td>
-<td class="success">0.024s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">givenIndiaStateCodeCSVFile_whenWrongPath_shouldThrowCustomException</td>
-<td class="success">0.041s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">givenIndiaStateCodeFile_whenIncorrectDelimiter_shouldThrowCustomException</td>
-<td class="success">0.024s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">givenIndiaStateCodeFile_whenIncorrectHeader_shouldThrowCustomException</td>
-<td class="success">0.010s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">givenIndiaStateCodeFile_whenSortedOnStateCode_shouldReturnSortedResult</td>
-<td class="success">0.021s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">givenIndiaStateCodeFile_whenWrongFileExtension_shouldThrowCustomException</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">givenIndianCensusCSVFile_whenIncorrectDelimiter_shouldThrowCustomException</td>
-<td class="success">0.171s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">givenIndianCensusCSVFile_whenIncorrectHeader_shouldThrowCustomException</td>
-<td class="success">0.012s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">givenIndianCensusCSVFile_whenProper_shouldReturnsCorrectRecordCount</td>
-<td class="success">0.010s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">givenIndianCensusCSVFile_whenSortedOnArea_shouldReturnSortedResult</td>
-<td class="success">0.396s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">givenIndianCensusCSVFile_whenSortedOnPopulationDensity_shouldReturnSortedResult</td>
-<td class="success">0.019s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">givenIndianCensusCSVFile_whenSortedOnPopulation_shouldReturnSortedResult</td>
-<td class="success">0.017s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">givenIndianCensusCSVFile_whenSortedOnState_shouldReturnSortedResult</td>
-<td class="success">0.021s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">givenIndianCensusCSVFile_whenWrongFileExtension_shouldThrowCustomException</td>
-<td class="success">0s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">givenIndianCensusCSVFile_whenWrongPath_shouldThrowCustomException</td>
-<td class="success">0.004s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">givenUSCensusCSVFile_whenProper_shouldReturnsCorrectRecordCount</td>
-<td class="success">0.089s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">givenUSCensusCSVFile_whenSortedOnArea_shouldReturnSortedResult</td>
-<td class="success">0.031s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">givenUSCensusCSVFile_whenSortedOnPopulationDensity_shouldReturnSortedResult</td>
-<td class="success">0.026s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">givenUSCensusCSVFile_whenSortedOnPopulation_shouldReturnSortedResult</td>
-<td class="success">0.039s</td>
-<td class="success">passed</td>
 </tr>
 </table>
 </div>
@@ -248,7 +155,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.3</a> at 26-Aug-2020, 8:28:44 AM</p>
+<a href="http://www.gradle.org">Gradle 6.3</a> at 26-Aug-2020, 3:35:12 PM</p>
 </div>
 </div>
 </body>
