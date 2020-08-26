@@ -3,6 +3,17 @@ package censusanalyser;
 import com.opencsv.bean.CsvBindByName;
 
 public class IndiaCensusCSV {
+
+    public IndiaCensusCSV() {
+
+    }
+    public IndiaCensusCSV(String state, int population, int areaInSqKm, int densityPerSqKm) {
+        this.state = state;
+        this.population = population;
+        this.areaInSqKm = areaInSqKm;
+        this.densityPerSqKm = densityPerSqKm;
+    }
+
     @CsvBindByName(column = "State", required = true)
     public String state;
 
@@ -10,7 +21,7 @@ public class IndiaCensusCSV {
     public int population;
 
     @CsvBindByName(column = "AreaInSqKm", required = true)
-    public int areaInAqKm;
+    public int areaInSqKm;
 
     @CsvBindByName(column = "DensityPerSqKm", required = true)
     public int densityPerSqKm;
@@ -20,7 +31,7 @@ public class IndiaCensusCSV {
         return "IndiaCensusCSV{" +
                 "state='" + state + '\'' +
                 ", population=" + population +
-                ", areaInAqKm=" + areaInAqKm +
+                ", areaInAqKm=" + areaInSqKm +
                 ", densityPerSqKm=" + densityPerSqKm +
                 '}';
     }

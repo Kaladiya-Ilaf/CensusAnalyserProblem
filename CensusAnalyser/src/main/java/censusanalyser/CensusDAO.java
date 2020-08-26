@@ -9,7 +9,7 @@ public class CensusDAO {
 
     public CensusDAO(IndiaCensusCSV indiaCensusCSV) {
         state = indiaCensusCSV.state;
-        totalArea = indiaCensusCSV.areaInAqKm;
+        totalArea = indiaCensusCSV.areaInSqKm;
         populationDensity =indiaCensusCSV.densityPerSqKm;
         population = indiaCensusCSV.population;
     }
@@ -24,5 +24,11 @@ public class CensusDAO {
         population = usCensusCSV.population;
         populationDensity = usCensusCSV.density;
         totalArea = usCensusCSV.area;
+    }
+
+    public Object getCensusDTO(CensusAnalyser.Country country) {
+        if (country.equals(CensusAnalyser.Country.US))
+            return new USCensusCSV(state, stateCode, population, populationDensity, totalArea);
+        return new IndiaCensusCSV(state, population, (int) populationDensity, (int) totalArea);
     }
 }
