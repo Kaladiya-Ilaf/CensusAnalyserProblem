@@ -2,10 +2,8 @@ package censusanalyser;
 
 import com.google.gson.Gson;
 import java.util.*;
-import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
-import static censusanalyser.SortByField.Field.STATE;
 import static java.util.stream.Collectors.toCollection;
 
 public class CensusAnalyser {

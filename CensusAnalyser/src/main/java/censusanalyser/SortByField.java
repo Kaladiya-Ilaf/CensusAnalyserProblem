@@ -23,9 +23,9 @@ public class SortByField {
         Comparator<CensusDAO> densityComparator = Comparator.comparing(census -> census.populationDensity);
 
         comparatorMap.put(Field.STATE, stateComparator);
-        comparatorMap.put(Field.POPULATION, populationComparator);
-        comparatorMap.put(Field.AREA,areaComparator);
-        comparatorMap.put(Field.DENSITY, densityComparator);
+        comparatorMap.put(Field.POPULATION, populationComparator.reversed());
+        comparatorMap.put(Field.AREA,areaComparator.reversed());
+        comparatorMap.put(Field.DENSITY, densityComparator.reversed());
 
         return (Comparator<CensusDAO>) comparatorMap.get(field);
     }
