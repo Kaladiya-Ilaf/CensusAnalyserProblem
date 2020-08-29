@@ -84,6 +84,54 @@ public class CensusAnalyserTest {
     }
 
     @Test
+    public void givenCSVFileForUS_whenWrongPath_shouldThrowCustomException() {
+        try {
+            CensusAnalyser censusAnalyser = new CensusAnalyser();
+            ExpectedException expectedException = ExpectedException.none();
+            expectedException.expect(CensusAnalyserException.class);
+            censusAnalyser.loadCensusData(CensusAnalyser.Country.US, WRONG_CSV_FILE_PATH);
+        } catch (CensusAnalyserException e) {
+            Assert.assertEquals(CensusAnalyserException.ExceptionType.INPUT_FILE_PROBLEM, e.type);
+        }
+    }
+
+    @Test
+    public void givenFileForUS_whenWrongFileExtension_shouldThrowCustomException() {
+        try {
+            CensusAnalyser censusAnalyser = new CensusAnalyser();
+            ExpectedException expectedException = ExpectedException.none();
+            expectedException.expect(CensusAnalyserException.class);
+            censusAnalyser.loadCensusData(CensusAnalyser.Country.US, WRONG_FILE_TYPE_PATH);
+        } catch (CensusAnalyserException e) {
+            Assert.assertEquals(CensusAnalyserException.ExceptionType.INPUT_FILE_PROBLEM, e.type);
+        }
+    }
+
+    @Test
+    public void givenUSCSVFile_whenIncorrectDelimiter_shouldThrowCustomException() {
+        try {
+            CensusAnalyser censusAnalyser = new CensusAnalyser();
+            ExpectedException expectedException = ExpectedException.none();
+            expectedException.expect(CensusAnalyserException.class);
+            censusAnalyser.loadCensusData(CensusAnalyser.Country.US, INCORRECT_DATA_CSV_FILE_PATH);
+        } catch (CensusAnalyserException e) {
+            Assert.assertEquals(CensusAnalyserException.ExceptionType.INCORRECT_DATA_PROBLEM, e.type);
+        }
+    }
+
+    @Test
+    public void givenUSCensusCSVFile_whenIncorrectHeader_shouldThrowCustomException() {
+        try {
+            CensusAnalyser censusAnalyser = new CensusAnalyser();
+            ExpectedException expectedException = ExpectedException.none();
+            expectedException.expect(CensusAnalyserException.class);
+            censusAnalyser.loadCensusData(CensusAnalyser.Country.US, INCORRECT_DATA_CSV_FILE_PATH);
+        } catch (CensusAnalyserException e) {
+            Assert.assertEquals(CensusAnalyserException.ExceptionType.INCORRECT_DATA_PROBLEM, e.type);
+        }
+    }
+
+    @Test
     public void givenIndianCensusCSVFile_whenSortedOnPopulation_shouldReturnSortedResult() {
         try {
             CensusAnalyser censusAnalyser = new CensusAnalyser();
