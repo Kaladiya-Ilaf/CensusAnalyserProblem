@@ -4,9 +4,8 @@ import com.opencsv.bean.CsvBindByName;
 
 public class IndiaCensusCSV {
 
-    public IndiaCensusCSV() {
+    public IndiaCensusCSV() {}
 
-    }
     public IndiaCensusCSV(String state, int population, int areaInSqKm, int densityPerSqKm) {
         this.state = state;
         this.population = population;

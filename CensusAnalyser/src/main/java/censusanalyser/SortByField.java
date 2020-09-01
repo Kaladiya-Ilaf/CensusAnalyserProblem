@@ -4,17 +4,18 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 
-
 public class SortByField {
     static Map<Field, Comparator> comparatorMap = new HashMap<>();
 
     enum Field {
-        STATE, POPULATION, AREA, DENSITY;
+        STATE,
+        POPULATION,
+        AREA,
+        DENSITY
     }
 
-    SortByField() {
+    SortByField() {}
 
-    }
     public static Comparator getParameter(SortByField.Field field) {
 
         Comparator<CensusDAO> stateComparator = Comparator.comparing(census -> census.state);

@@ -3,8 +3,7 @@ package censusanalyser;
 import com.opencsv.bean.CsvBindByName;
 
 public class USCensusCSV {
-    public USCensusCSV() {
-    }
+    public USCensusCSV() {}
 
     public USCensusCSV(String state, String stateId, int population, Double populationDensity, Double totalArea) {
         this.state = state;
