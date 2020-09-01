@@ -31,6 +31,12 @@ public class CensusAnalyserTest {
     }
 
     @Test
+    public void givenIndianCensusCSVFile_whenProper_shouldReturnsIncorrectRecordCount() throws CensusAnalyserException {
+        int numberOfRecords = censusAnalyser.loadCensusData(CensusAnalyser.Country.INDIA, INDIA_CENSUS_CSV_FILE_PATH, INDIA_STATE_CODE_CSV_FILE_PATH);
+        Assert.assertNotEquals(20, numberOfRecords);
+    }
+
+    @Test
     public void givenCSVFile_whenWrongPath_shouldThrowCustomException() {
         try {
             censusAnalyser.loadCensusData(CensusAnalyser.Country.INDIA, WRONG_CSV_FILE_PATH);
@@ -68,10 +74,30 @@ public class CensusAnalyserTest {
 
     @Test
     public void givenIndianCensusCSVFile_whenSortedOnState_shouldReturnSortedResult() throws CensusAnalyserException {
+        censusAnalyser.loadCensusData(CensusAnalyser.Country.INDIA, INDIA_CENSUS_CSV_FILE_PATH);
+        String stateWiseSortedCensusData = censusAnalyser.getFieldWiseSortedCensusData(CensusAnalyser.Country.INDIA, SortByField.Field.STATE);
+        IndiaCensusCSV[] censusCSV = new Gson().fromJson(stateWiseSortedCensusData, IndiaCensusCSV[].class);
+        Assert.assertEquals("Andhra Pradesh", censusCSV[0].state);
+    }
+
+    @Test
+    public void givenIndianCensusCSVFile_whenSortedOnStateCode_shouldReturnSortedResult() throws CensusAnalyserException {
         censusAnalyser.loadCensusData(CensusAnalyser.Country.INDIA, INDIA_CENSUS_CSV_FILE_PATH, INDIA_STATE_CODE_CSV_FILE_PATH);
         String stateWiseSortedCensusData = censusAnalyser.getFieldWiseSortedCensusData(CensusAnalyser.Country.INDIA, SortByField.Field.STATE);
         IndiaCensusCSV[] censusCSV = new Gson().fromJson(stateWiseSortedCensusData, IndiaCensusCSV[].class);
         Assert.assertEquals("AP", censusCSV[0].state);
+    }
+
+    @Test
+    public void givenUSCensusCSVFile_whenProper_shouldReturnsCorrectRecordCount() throws CensusAnalyserException {
+        int numberOfRecords = censusAnalyser.loadCensusData(CensusAnalyser.Country.US, US_CENSUS_CSV_FILE_PATH);
+        Assert.assertEquals(51, numberOfRecords);
+    }
+
+    @Test
+    public void givenUSCensusCSVFile_whenProper_shouldReturnsIncorrectRecordCount() throws CensusAnalyserException {
+        int numberOfRecords = censusAnalyser.loadCensusData(CensusAnalyser.Country.US, US_CENSUS_CSV_FILE_PATH);
+        Assert.assertNotEquals(50, numberOfRecords);
     }
 
     @Test
@@ -134,11 +160,7 @@ public class CensusAnalyserTest {
         Assert.assertEquals("Rajasthan", censusCSV[0].state);
     }
 
-    @Test
-    public void givenUSCensusCSVFile_whenProper_shouldReturnsCorrectRecordCount() throws CensusAnalyserException {
-        int numberOfRecords = censusAnalyser.loadCensusData(CensusAnalyser.Country.US, US_CENSUS_CSV_FILE_PATH);
-        Assert.assertEquals(51, numberOfRecords);
-    }
+
 
     @Test
     public void givenUSCensusCSVFile_whenSortedOnPopulation_shouldReturnSortedResult() throws CensusAnalyserException {
