@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">16</div>
+<div class="counter">20</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1.944s</div>
+<div class="counter">3.027s</div>
 <p>duration</p>
 </div>
 </td>
@@ -75,83 +75,103 @@
 </tr>
 </thead>
 <tr>
+<td class="success">givenCSVFileForUS_whenWrongPath_shouldThrowCustomException</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">givenCSVFile_whenIncorrectDelimiter_shouldThrowCustomException</td>
-<td class="success">0.414s</td>
+<td class="success">0.192s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">givenCSVFile_whenWrongPath_shouldThrowCustomException</td>
-<td class="success">0.049s</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">givenFileForUS_whenWrongFileExtension_shouldThrowCustomException</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">givenFile_whenWrongFileExtension_shouldThrowCustomException</td>
-<td class="success">0.113s</td>
+<td class="success">0.239s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">givenIndiaCensusCSVFile_WhenSortedByPopulationAndDensity_ShouldReturnMostPopulousStateWithDensity</td>
-<td class="success">0.871s</td>
+<td class="success">0.944s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">givenIndianCensusCSVFile_whenIncorrectHeader_shouldThrowCustomException</td>
-<td class="success">0.008s</td>
+<td class="success">0.067s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">givenIndianCensusCSVFile_whenProper_shouldReturnsCorrectRecordCount</td>
-<td class="success">0.038s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">givenIndianCensusCSVFile_whenSortedOnArea_shouldReturnSortedResult</td>
-<td class="success">0.034s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">givenIndianCensusCSVFile_whenSortedOnPopulationDensity_shouldReturnSortedResult</td>
-<td class="success">0.029s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">givenIndianCensusCSVFile_whenSortedOnPopulation_shouldReturnSortedResult</td>
 <td class="success">0.020s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">givenIndianCensusCSVFile_whenSortedOnState_shouldReturnSortedResult</td>
-<td class="success">0.133s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">givenUSCensusCSVFile_WhenSortedByPopulationAndDensity_ShouldReturnMostPopulousStateWithDencity</td>
-<td class="success">0.021s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">givenUSCensusCSVFile_WhenSortedByPopulationAndDensity_ShouldReturnMostPopulousStateWithDensity</td>
+<td class="success">givenIndianCensusCSVFile_whenSortedOnArea_shouldReturnSortedResult</td>
 <td class="success">0.025s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">givenIndianCensusCSVFile_whenSortedOnPopulationDensity_shouldReturnSortedResult</td>
+<td class="success">0.018s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">givenIndianCensusCSVFile_whenSortedOnPopulation_shouldReturnSortedResult</td>
+<td class="success">0.016s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">givenIndianCensusCSVFile_whenSortedOnState_shouldReturnSortedResult</td>
+<td class="success">0.115s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">givenUSCSVFile_whenIncorrectDelimiter_shouldThrowCustomException</td>
+<td class="success">0.872s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">givenUSCensusCSVFile_WhenSortedByPopulationAndDensity_ShouldReturnMostPopulousStateWithDencity</td>
+<td class="success">0.044s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">givenUSCensusCSVFile_WhenSortedByPopulationAndDensity_ShouldReturnMostPopulousStateWithDensity</td>
+<td class="success">0.022s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">givenUSCensusCSVFile_whenIncorrectHeader_shouldThrowCustomException</td>
+<td class="success">0.013s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">givenUSCensusCSVFile_whenProper_shouldReturnsCorrectRecordCount</td>
-<td class="success">0.089s</td>
+<td class="success">0.035s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">givenUSCensusCSVFile_whenSortedOnArea_shouldReturnSortedResult</td>
-<td class="success">0.053s</td>
+<td class="success">0.077s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">givenUSCensusCSVFile_whenSortedOnPopulationDensity_shouldReturnSortedResult</td>
-<td class="success">0.024s</td>
+<td class="success">0.284s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">givenUSCensusCSVFile_whenSortedOnPopulation_shouldReturnSortedResult</td>
-<td class="success">0.023s</td>
+<td class="success">0.037s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -164,7 +184,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.3</a> at 29-Aug-2020, 9:40:56 AM</p>
+<a href="http://www.gradle.org">Gradle 6.3</a> at 01-Sep-2020, 8:21:15 PM</p>
 </div>
 </div>
 </body>
